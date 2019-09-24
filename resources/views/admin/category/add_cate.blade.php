@@ -2,7 +2,7 @@
 <html>
 <form action="" method="post">
     <table border="1">
-        <tr>
+        <tr>thành
             <td>Category name</td>
             <td><input type="text"name="name"></td>
         </tr>
