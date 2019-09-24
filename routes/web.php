@@ -19,5 +19,7 @@ Route::group(['prefix'=>'admin','namespace'=>'Admin'],function (){
         Route::get("them",['as'=>'themdanhmuc','uses'=>'CategoryController@getAddCate']);
 
         Route::post("them",['as'=>'themdanhmuc','uses'=>'CategoryController@postAddCate']);
+        Route::get("danh-sach",['as'=>'listdanhmuc','uses'=>'CategoryController@getListCate']);
+
     });
 });

@@ -1,6 +1,6 @@
 
 <html>
-<form action="" method="post    ">
+<form action="" method="post">
     <table border="1">
         <tr>
             <td>Category name</td>
@@ -14,7 +14,8 @@
             <td colspan="2"><button type="submit"name="save">Save</button>
                 <button type="submit"name="cancel">Cancel</button></td>
         </tr>
-        {{csrf_field()}}
+
     </table>
+    {{csrf_field()}}
 </form>
 </html>

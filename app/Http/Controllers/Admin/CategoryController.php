@@ -27,6 +27,12 @@ class CategoryController extends Controller
         $cate->created_at = new DateTime;
         $cate->save();
 
-        return redirect(route('themdanhmuc'))->with("message","Thêm thành công");
+
+    }
+    public function getListCate()
+    {
+        $cates = Category::all();
+
+        return view("admin.category.list_cate",compact('cates'));
     }
 }
