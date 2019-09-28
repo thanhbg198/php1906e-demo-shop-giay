@@ -1,5 +1,3 @@
-@extends('admin.layout.master')
-@section('content')
 
     <table border="1">
         <tr>
@@ -15,5 +13,4 @@
             </tr>
         @endforeach
     </table>
-@endsection
 

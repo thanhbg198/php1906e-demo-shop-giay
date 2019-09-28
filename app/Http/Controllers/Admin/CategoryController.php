@@ -26,6 +26,9 @@ class CategoryController extends Controller
         $cate->order_display  = $request->order_display;
         $cate->created_at = new DateTime;
         $cate->save();
+        $cates = Category::all();
+
+        return view("admin.category.list_cate",compact('cates'));
 
 
     }
