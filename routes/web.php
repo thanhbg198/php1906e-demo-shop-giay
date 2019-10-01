@@ -11,9 +11,16 @@
 |
 */
 
+use Illuminate\Routing\Route;
+
 Route::get('/', function () {
     return view('welcome');
 });
+//Route::get("admin/dangnhap,['as'=>'dangnhap','uses'=>'UserController@getLogin']");
+//Route::post("admin/dangnhap,['as'=>'dangnhap','uses'=>'UserController@getLogin']");
+
+
+
 Route::group(['prefix'=>'admin','namespace'=>'Admin','middleware'=>'loginAdmin'],function (){
     Route::group(["prefix"=>'danh-muc'],function (){
         Route::get("them",['as'=>'themdanhmuc','uses'=>'CategoryController@getAddCate']);
