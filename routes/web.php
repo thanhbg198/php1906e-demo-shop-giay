@@ -14,7 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::group(['prefix'=>'admin','namespace'=>'Admin'],function (){
+Route::group(['prefix'=>'admin','namespace'=>'Admin','middleware'=>'loginAdmin'],function (){
     Route::group(["prefix"=>'danh-muc'],function (){
         Route::get("them",['as'=>'themdanhmuc','uses'=>'CategoryController@getAddCate']);
 
