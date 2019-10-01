@@ -16,8 +16,9 @@ use Illuminate\Routing\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-//Route::get("admin/dangnhap,['as'=>'dangnhap','uses'=>'UserController@getLogin']");
-//Route::post("admin/dangnhap,['as'=>'dangnhap','uses'=>'UserController@getLogin']");
+Route::get("admin/dangnhap",['as'=>'admin_login','uses'=>'PageController@getAddCate']);
+
+//Route::post("admin/dangnhap,['as'=>'dangnhap','uses'=>'PageController@getLogin']");
 
 
 

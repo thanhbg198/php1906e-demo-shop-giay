@@ -20,10 +20,10 @@ class AdminLoginMiddleware
             if(Auth::guard()->user()->level == 2){
                 return $next($request);
             }else{
-                return redirect('admin/dang-nhap');
+                return redirect()->route('admin_login');
             }
         }else{
-            return redirect('admin/dang-nhap');
+            return redirect()->route('admin_login');
         }
     }
 }
