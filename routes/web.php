@@ -11,12 +11,12 @@
 |
 */
 
-use Illuminate\Routing\Route;
+use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
 });
-//Route::get("admin/dangnhap",['as'=>'admin_login','uses'=>'PageController@getAddCate']);
+Route::get("admin/dangnhap",['as'=>'admin_login','uses'=>'PageController@getLogin']);
 
 //Route::post("admin/dangnhap,['as'=>'dangnhap','uses'=>'PageController@getLogin']");
 
